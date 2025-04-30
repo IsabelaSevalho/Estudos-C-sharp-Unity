@@ -10,3 +10,5 @@ burst-llvm-18-arm64.dll/* filter=lfs diff=lfs merge=lfs -text
 libburst-llvm-10.dylib/* filter=lfs diff=lfs merge=lfs -text
 libburst-llvm-18.dylib/* filter=lfs diff=lfs merge=lfs -text
 libburst-llvm-18.so/* filter=lfs diff=lfs merge=lfs -text
+C:/GitHub/Estudos-C-sharp-Unity/ filter=lfs diff=lfs merge=lfs -text
+PackageCache/ filter=lfs diff=lfs merge=lfs -text
