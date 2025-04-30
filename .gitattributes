@@ -4,3 +4,9 @@ em filter=lfs diff=lfs merge=lfs -text
 trilhas filter=lfs diff=lfs merge=lfs -text
 C:/GitHub/Estudos-C-sharp-Unity/Aulas_TIC_em_trilhas filter=lfs diff=lfs merge=lfs -text
 Aulas_TIC_em_trilhas/* filter=lfs diff=lfs merge=lfs -text
+com.unity.burst@1.8.19/* filter=lfs diff=lfs merge=lfs -text
+burst-llvm-18.dll/* filter=lfs diff=lfs merge=lfs -text
+burst-llvm-18-arm64.dll/* filter=lfs diff=lfs merge=lfs -text
+libburst-llvm-10.dylib/* filter=lfs diff=lfs merge=lfs -text
+libburst-llvm-18.dylib/* filter=lfs diff=lfs merge=lfs -text
+libburst-llvm-18.so/* filter=lfs diff=lfs merge=lfs -text
