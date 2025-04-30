@@ -3,3 +3,4 @@ TIC filter=lfs diff=lfs merge=lfs -text
 em filter=lfs diff=lfs merge=lfs -text
 trilhas filter=lfs diff=lfs merge=lfs -text
 C:/GitHub/Estudos-C-sharp-Unity/Aulas_TIC_em_trilhas filter=lfs diff=lfs merge=lfs -text
+Aulas_TIC_em_trilhas/* filter=lfs diff=lfs merge=lfs -text
