@@ -34,6 +34,8 @@ public class NewBehaviourScript : MonoBehaviour
         //verifica o valor do botão que está clicando
         var moveInputs = inputActions.Player_Map.Movement.ReadValue<Vector2>();
 
-        Debug.Log("Move inputs: " + moveInputs);
+        //considera o botão selecionado
+        //Time.deltaTime para movimentar de forma mais fluida, num tempo constante
+        transform.position += Time.deltaTime * new Vector3(moveInputs.x, 0, 0);
     }
 }
