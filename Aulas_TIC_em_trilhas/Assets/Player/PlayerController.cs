@@ -9,7 +9,11 @@ public class NewBehaviourScript : MonoBehaviour
     public float speed = 2.7f; //public para poder ser acessada e alterada no unity
     public float jumpForce = 5f;
 
+    public GameObject shotPrefab;
+    public float shotForce = 10f;
+
     bool canJump = true;//para impedir pulos duplos/triplos e etc
+    bool canAttack = true;
 
     SpriteRenderer spriteRenderer; //referência para o sprite renderer para poder flipar
     Animator animator;
@@ -67,6 +71,7 @@ public class NewBehaviourScript : MonoBehaviour
         canJump = Mathf.Abs(body.velocity.y) <= 0.001f;//se tiver caindo/subindo em uma grande velocidade, não pode pular
 
         HandlerJumpAction();
+        HandleAttack();
     }
 
     //verifica se o botao de pulo foi pressionado
@@ -80,5 +85,40 @@ public class NewBehaviourScript : MonoBehaviour
             //ForceMode2D.Impulse é força de impulso, existe o de força tbm 
             //impulso vai de uma vez só, de força é gradativo (tipo aqueles jogos que só pula se gritar algo e tal)
         }
+    }
+
+    //verificar se o player pediu para atirar
+    void HandleAttack()
+    { 
+        var attackPressed = inputActions.Player_Map.Attack.IsPressed();
+
+        if (canAttack && attackPressed) 
+        {
+            canAttack = false; //se já está atacando, não pode mais atacar
+
+            animator.SetTrigger("t_attack");
+
+        }
+
+    }
+
+    public void ShotNewEgg()
+    {
+        var newShot = GameObject.Instantiate(shotPrefab);//cria um novo objeto, na posição 0,0
+        newShot.transform.position = transform.position; //muda a posição para ser a mesma do personagem
+
+        //direção: 1 - direita, -1 - esquerda
+        var isLookingRight = !(spriteRenderer.flipX); // true se esquerda, false direita
+        Vector2 shotDirection = shotForce * new Vector2(isLookingRight ? -1 : 1, 0); //direção do tiro, fazendo o contrário da direção da galinha pro ovo sair por trás
+        newShot.GetComponent<Rigidbody2D>().AddForce(shotDirection, ForceMode2D.Impulse);//aplica a força
+
+        //trocando o sentido do ovo pra quandofor pra esquerda, estar correto
+        newShot.GetComponent<SpriteRenderer>().flipY = !isLookingRight;
+
+    }
+
+    public void SetCanAttack() 
+    {
+        canAttack = true;
     }
 }
