@@ -7,9 +7,13 @@ public class NewBehaviourScript : MonoBehaviour
     PlayerInputs inputActions;
 
     public float speed = 2.7f; //public para poder ser acessada e alterada no unity
+    public float jumpForce = 5f;
+
+    bool canJump = true;//para impedir pulos duplos/triplos e etc
 
     SpriteRenderer spriteRenderer; //referência para o sprite renderer para poder flipar
     Animator animator;
+    Rigidbody2D body;
 
     // Start is called before the first frame update
     //Awake é chamado antes do start
@@ -23,6 +27,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); //procura o sprite renderer dos componentes no game object
         animator= GetComponent<Animator>(); //pega os componentes do animator (nesse caso é o bool de is Walking)
+        body= GetComponent<Rigidbody2D>(); //pega componentes desse tipo (corpo do player)
     }
 
     private void OnEnable()
@@ -38,11 +43,11 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //chamada 60 vezes por segundo
     {
         //Debug.Log("Update está funcionando");
 
-        //verifica o valor do botão que está clicando
+        //verifica o valor do botão que está clicando - Movimento
         var moveInputs = inputActions.Player_Map.Movement.ReadValue<Vector2>();
 
         //considera o botão selecionado
@@ -56,6 +61,24 @@ public class NewBehaviourScript : MonoBehaviour
         if (moveInputs.x != 0) //para não mudar toda hora
         {
             spriteRenderer.flipX = moveInputs.x < 0; //se for para a esquerda
+        }
+
+        //verifica se avelocidade em y é pequena (negativa), provavelmente no chão
+        canJump = Mathf.Abs(body.velocity.y) <= 0.001f;//se tiver caindo/subindo em uma grande velocidade, não pode pular
+
+        HandlerJumpAction();
+    }
+
+    //verifica se o botao de pulo foi pressionado
+    void HandlerJumpAction()
+    {
+        var jumpPressed = inputActions.Player_Map.Jump.IsPressed();
+
+        if (canJump && jumpPressed)
+        {
+            body.AddForce(jumpForce * Vector2.up, ForceMode2D.Impulse);//aplica força, pode ser p cima, p baixo e p lados
+            //ForceMode2D.Impulse é força de impulso, existe o de força tbm 
+            //impulso vai de uma vez só, de força é gradativo (tipo aqueles jogos que só pula se gritar algo e tal)
         }
     }
 }
