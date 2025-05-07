@@ -1,3 +1,8 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
 /*Implemente um programa no qual o usuário deverá informar o nome e a idade de três pessoas.
 O programa deverá informar o nome da pessoa que possuir a maior idade.
 
@@ -70,8 +75,8 @@ class Programa
             Pessoa pessoa = new Pessoa();
             Console.WriteLine($"Digite o nome da pessoa {i+1}: ");
             string nome = Console.ReadLine(); //lendo o que foi escrito
-            Console.WriteLine($"Digite o nome da pessoa {i+1}: ");
-            int idade = Int32.Parse(Console.readLine());//convertendo a string para inteiro
+            Console.WriteLine($"Digite a idade da pessoa {i+1}: ");
+            int idade = Int32.Parse(Console.ReadLine());//convertendo a string para inteiro
 
             pessoa.Nome = nome;
             pessoa.Idade= idade;
@@ -80,7 +85,7 @@ class Programa
         }
 
         int maiorIdade = 0;
-        string nomeMaiorIdade;
+        string nomeMaiorIdade = "";
 
         foreach(Pessoa pessoa in listaPessoas)
         {
@@ -91,6 +96,6 @@ class Programa
             }
         }
 
-        Console.WriteLine($"A pessoa com maior idade é {nomeMaiorIdade} com {maiorIdade} anos!");
+        Console.WriteLine($"A pessoa com maior idade eh {nomeMaiorIdade} com {maiorIdade} anos!");
     }
 }
