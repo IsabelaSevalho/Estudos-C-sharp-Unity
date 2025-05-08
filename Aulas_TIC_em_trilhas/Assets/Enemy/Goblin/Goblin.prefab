@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8918866287508448018}
   m_Layer: 0
   m_Name: Goblin
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &8620956629254404547
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -183,5 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22819433aba5c1946b827cca933afa37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  destinations: []
+  speed: 3.5
+  destinations:
+  - {fileID: 0}
+  - {fileID: 0}

@@ -377,8 +377,10 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.61f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Enemy/Goblin/GoblinController.cs"
 "Assets/Player/PlayerAttack.cs"
+"Assets/Player/PlayerContactHandler.cs"
 "Assets/Player/PlayerController.cs"
 "Assets/Player/PlayerInputs.cs"
+"Assets/Shots/ShotController.cs"
 -langversion:9.0
 /deterministic
 /optimize+

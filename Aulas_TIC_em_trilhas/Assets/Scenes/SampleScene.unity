@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8025026494846388757, guid: aa1daa2657ed85e469378d312d7e1452, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -495,7 +499,7 @@ GameObject:
   - component: {fileID: 1189177391}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -727,6 +731,7 @@ GameObject:
   - component: {fileID: 1590676845}
   - component: {fileID: 1590676847}
   - component: {fileID: 1590676846}
+  - component: {fileID: 1590676848}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -774,7 +779,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 286709356, guid: 0e418d014cc09474597545a63a381db5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -900,6 +905,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1590676848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590676841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7e78daeb541f99468f2b49949da8757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 981820816}
 --- !u!1001 &1902863619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -965,10 +983,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4283966475578097670, guid: f7da5d0fd43bab34d9581b7f01cb2ac2, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5523992611137524728, guid: f7da5d0fd43bab34d9581b7f01cb2ac2, type: 3}
       propertyPath: m_Name
       value: Goblin
@@ -1012,14 +1026,6 @@ PrefabInstance:
     - target: {fileID: 8192068415273414108, guid: f7da5d0fd43bab34d9581b7f01cb2ac2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918866287508448018, guid: f7da5d0fd43bab34d9581b7f01cb2ac2, type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918866287508448018, guid: f7da5d0fd43bab34d9581b7f01cb2ac2, type: 3}
-      propertyPath: destinations.Array.size
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8918866287508448018, guid: f7da5d0fd43bab34d9581b7f01cb2ac2, type: 3}
       propertyPath: destinations.Array.data[0]
