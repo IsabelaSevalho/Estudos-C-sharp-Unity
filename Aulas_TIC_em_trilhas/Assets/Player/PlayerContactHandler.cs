@@ -6,6 +6,7 @@ using UnityEngine.UI; //para usar a interface
 public class PlayerContactHandler : MonoBehaviour //é o player
 {
     public Image itemImage;//pegando uma referência da image (ovo superior esquerdo)
+    public PlayerAudioController audioController;
     bool canWinLevel = false;
 
     private void OnCollisionEnter2D(Collision2D collision) //função que detecta uma colisão de colliders ("corpo" de um item)
@@ -30,6 +31,9 @@ public class PlayerContactHandler : MonoBehaviour //é o player
             Destroy(collision.gameObject); //destruindo
             itemImage.color = Color.white; //deixa o ovo com sua cor original
             canWinLevel = true;
+
+            //audio de pegar item
+            audioController.PlayGetItem();
         }
 
         if (collision.gameObject.CompareTag("FinalPoint"))//verificando se encostou no ninho para ser ganho de fase

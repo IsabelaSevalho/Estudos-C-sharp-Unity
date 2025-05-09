@@ -11,6 +11,9 @@ public class ShotController : MonoBehaviour
         { 
             Destroy(collision.gameObject); //destruindo o inimigo
             Destroy(gameObject); //destruindo a si mesmo
+
+            //som da morte do inimigo
+            FindObjectOfType<SoundEffectsController>().PlayEnemyDeath(); //find object of type já resgata o objeto do tipo especificado
         }
     }
 }
