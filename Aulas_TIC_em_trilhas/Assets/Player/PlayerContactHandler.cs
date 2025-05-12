@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //para usar a interface
+using UnityEngine.SceneManagement; //para trocar de tela
 
 public class PlayerContactHandler : MonoBehaviour //é o player
 {
+    public string nextLevelName="Level1";
+
     public Image itemImage;//pegando uma referência da image (ovo superior esquerdo)
     public PlayerAudioController audioController;
     bool canWinLevel = false;
@@ -14,8 +17,8 @@ public class PlayerContactHandler : MonoBehaviour //é o player
         //Collision2D collision é o outro corpo que encostou no player
 
         if (collision.gameObject.CompareTag("Enemy"))//if que verifica se a tag do objeto que encostou é a que queremos
-        { 
-            
+        {
+            SceneManager.LoadScene("GameOverScene");
         }
     }
 
@@ -40,7 +43,7 @@ public class PlayerContactHandler : MonoBehaviour //é o player
         {
             if (canWinLevel) //verificando se passou de fase
             {
-
+                SceneManager.LoadScene(nextLevelName);
             }
             else
             {

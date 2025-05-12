@@ -5171,6 +5171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e78daeb541f99468f2b49949da8757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevelName: Level2
   itemImage: {fileID: 981820816}
   audioController: {fileID: 1590676849}
 --- !u!114 &1590676849

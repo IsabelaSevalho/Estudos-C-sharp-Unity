@@ -382,6 +382,7 @@
 "Assets/Player/PlayerContactHandler.cs"
 "Assets/Player/PlayerController.cs"
 "Assets/Player/PlayerInputs.cs"
+"Assets/Scenes/SceneController.cs"
 "Assets/Shots/ShotController.cs"
 -langversion:9.0
 /deterministic
