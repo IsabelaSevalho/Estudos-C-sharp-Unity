@@ -1,0 +1,57 @@
+fileFormatVersion: 2
+guid: 5954dd7d1dac917459ed22ee1928581e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: fall
+    second: {fileID: 7400000, guid: 3dd79d1cc30b577489b8b3f3aa848ac7, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: idle
+    second: {fileID: 7400000, guid: 2dbe788909662404aa11b65abe3df047, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: run
+    second: {fileID: 7400000, guid: 1135cc673c1256e47a707b00af5845e1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: tilt_l
+    second: {fileID: 7400000, guid: bc784d86329a7c642a30c65f582c32d0, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: tilt_r
+    second: {fileID: 7400000, guid: 1dc05401b9113904f9256b9f6eec19d6, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: up
+    second: {fileID: 7400000, guid: bf77d5199aabace428e8de78ef23d1d0, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: walk
+    second: {fileID: 7400000, guid: 04c04fd1e345e5a4a84e8917a7787932, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: wave
+    second: {fileID: 7400000, guid: 4bb23976782fa864785bc7ecd0e9b73f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: __UNIGLTF__DEFAULT__MATERIAL__
+    second: {fileID: 2100000, guid: 9fea92634ad28ea4d8344d01aa72fef9, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc45016b844e7624dae3aec10fb443ea, type: 3}
+  reverseAxis: 0
+  renderPipeline: 0
