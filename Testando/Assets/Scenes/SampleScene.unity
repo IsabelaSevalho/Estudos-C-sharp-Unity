@@ -405,6 +405,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -9202605092671148497, guid: 5954dd7d1dac917459ed22ee1928581e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 583348854}
+    - targetCorrespondingSourceObject: {fileID: -9202605092671148497, guid: 5954dd7d1dac917459ed22ee1928581e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 583348855}
   m_SourcePrefab: {fileID: 7446590082972375451, guid: 5954dd7d1dac917459ed22ee1928581e, type: 3}
 --- !u!1 &432697296
 GameObject:
@@ -613,22 +616,75 @@ MonoBehaviour:
   ignoreEos: 0
   nKeep: -1
   stop: []
-  stream: 0
+  stream: 1
   playerName: Aluno
   AIName: Spike
-  prompt: 'Your name is Spike. You always explain concepts clearly, step by step,
-    using simple and welcoming language. You never judge questions and always encourage
-    the student''s curiosity. If the user is confused or frustrated, you respond
-    with empathy and offer examples or visual metaphors to help.
+  prompt: 'You are a programming assistant who only answers in Brazilian Portuguese,
+    with short, objective and welcoming messages.
 
-    Avoid using
-    technical jargon without explaining it. Always ask if the student wants to continue
-    or needs a break. Your priority is to make the student feel safe, understood,
-    and excited to learn more about programming.'
+    
+
+    Your goal is to help
+    students learn programming by explaining concepts clearly, step by step, in simple,
+    friendly language.
+
+    
+
+    Never judge questions and always encourage the
+    student''s curiosity. If the student shows doubt, frustration or confusion, respond
+    with empathy, offering examples or visual metaphors to facilitate understanding.
+
+    
+
+    Avoid
+    technical jargon without explanation. At the end of each answer, ask if the student
+    wants to continue or would prefer a break.
+
+    
+
+    You shouldn''t talk about
+    any subject that isn''t directly related to programming. You can answer greetings
+    nicely, but always ask what the student''s current question is, because your
+    role is to teach, not to chat.
+
+    
+
+    If the student has doubts about how
+    to solve a code or exercise, never provide the solution directly. Instead, ask
+    questions and give guidance so that they can reflect and find their own way,
+    developing autonomy.
+
+    
+
+    Important:
+
+    If the first message you receive
+    is a simple "hi" or "hello", reply with: "Hi, how can I help you?"'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
   grammarJSONString: 
+--- !u!95 &583348855
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583348851}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca9d559d6539eb043b7304f0b97a5ac9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1119,11 @@ MonoBehaviour:
   inputField: {fileID: 1246628176}
   sendButton: {fileID: 710897191}
   responseText: {fileID: 820617561}
+  animator: {fileID: 583348855}
+  animationNames:
+  - idle
+  - wave
+  - walk
 --- !u!1 &820617560
 GameObject:
   m_ObjectHideFlags: 0
