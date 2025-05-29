@@ -369,7 +369,8 @@
 "Assets/LLMUnity/Samples/RAG/RAGUtils.cs"
 "Assets/LLMUnity/Samples/RAG/RAG_Sample.cs"
 "Assets/LLMUnity/Samples/SimpleInteraction/SimpleInteraction.cs"
-"Assets/Scripts/MyScript.cs"
+"Assets/Scripts/AnimatorRobot.cs"
+"Assets/Scripts/LLMChat.cs"
 -langversion:9.0
 /deterministic
 /optimize+

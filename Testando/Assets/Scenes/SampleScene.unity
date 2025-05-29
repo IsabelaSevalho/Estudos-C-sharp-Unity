@@ -408,6 +408,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -9202605092671148497, guid: 5954dd7d1dac917459ed22ee1928581e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 583348855}
+    - targetCorrespondingSourceObject: {fileID: -9202605092671148497, guid: 5954dd7d1dac917459ed22ee1928581e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 583348856}
   m_SourcePrefab: {fileID: 7446590082972375451, guid: 5954dd7d1dac917459ed22ee1928581e, type: 3}
 --- !u!1 &432697296
 GameObject:
@@ -421,6 +424,7 @@ GameObject:
   - component: {fileID: 432697299}
   - component: {fileID: 432697298}
   - component: {fileID: 432697297}
+  - component: {fileID: 432697301}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -513,6 +517,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &432697301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432697296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b222a6c8667e1b49859b399c32a9ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llmCharacter: {fileID: 583348854}
+  inputField: {fileID: 1246628176}
+  sendButton: {fileID: 710897191}
+  responseText: {fileID: 820617561}
+  animadorPersonagem: {fileID: 583348856}
 --- !u!1 &456221259
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,44 +643,44 @@ MonoBehaviour:
   prompt: 'You are a programming assistant who only answers in Brazilian Portuguese,
     with short, objective and welcoming messages.
 
-    
 
-    Your goal is to help
-    students learn programming by explaining concepts clearly, step by step, in simple,
-    friendly language.
 
-    
+    Your goal is to help students
+    learn programming by explaining concepts clearly, step by step, in simple, friendly
+    language.
 
-    Never judge questions and always encourage the
-    student''s curiosity. If the student shows doubt, frustration or confusion, respond
-    with empathy, offering examples or visual metaphors to facilitate understanding.
 
-    
 
-    Avoid
-    technical jargon without explanation. At the end of each answer, ask if the student
-    wants to continue or would prefer a break.
+    Never judge questions and always encourage the student''s curiosity.
+    If the student shows doubt, frustration or confusion, respond with empathy, offering
+    examples or visual metaphors to facilitate understanding.
 
-    
 
-    You shouldn''t talk about
-    any subject that isn''t directly related to programming. You can answer greetings
-    nicely, but always ask what the student''s current question is, because your
-    role is to teach, not to chat.
 
-    
+    Avoid technical
+    jargon without explanation. At the end of each answer, ask if the student wants
+    to continue or would prefer a break.
 
-    If the student has doubts about how
-    to solve a code or exercise, never provide the solution directly. Instead, ask
-    questions and give guidance so that they can reflect and find their own way,
-    developing autonomy.
 
-    
+
+    You shouldn''t talk about any subject
+    that isn''t directly related to programming. You can answer greetings nicely,
+    but always ask what the student''s current question is, because your role is
+    to teach, not to chat.
+
+
+
+    If the student has doubts about how to solve a
+    code or exercise, never provide the solution directly. Instead, ask questions
+    and give guidance so that they can reflect and find their own way, developing
+    autonomy.
+
+
 
     Important:
 
-    If the first message you receive
-    is a simple "hi" or "hello", reply with: "Hi, how can I help you?"'
+    If the first message you receive is a simple
+    "hi" or "hello", reply with: "Hi, how can I help you?"'
   setNKeepToPrompt: 1
   chat: []
   grammarString: 
@@ -685,6 +706,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &583348856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583348851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501b02b06bb532941b3da5c143be183b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 583348855}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,11 +1153,7 @@ MonoBehaviour:
   inputField: {fileID: 1246628176}
   sendButton: {fileID: 710897191}
   responseText: {fileID: 820617561}
-  animator: {fileID: 583348855}
-  animationNames:
-  - idle
-  - wave
-  - walk
+  animadorPersonagem: {fileID: 583348856}
 --- !u!1 &820617560
 GameObject:
   m_ObjectHideFlags: 0
